@@ -9,6 +9,14 @@ import UIKit
 
 class PlayViewController: UIViewController {
 
+
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var livesLabel: UILabel!
+    @IBOutlet weak var userScore: UILabel!
+    @IBOutlet weak var userLives: UILabel!
+    @IBOutlet weak var currWord: UILabel!
+    @IBOutlet weak var userGuess: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

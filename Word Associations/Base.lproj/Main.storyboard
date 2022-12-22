@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpt-YW-X1W">
-                                <rect key="frame" x="0.0" y="59" width="392" height="44"/>
+                                <rect key="frame" x="0.0" y="59" width="391" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
@@ -68,6 +68,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Pny-L3-ihX"/>
+                    <connections>
+                        <outlet property="playButton" destination="L64-81-Ets" id="LWD-OF-bPW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0T-Fm-91T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,15 +107,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIF-gm-LJV">
-                                <rect key="frame" x="10" y="121" width="59" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIF-gm-LJV">
+                                <rect key="frame" x="20" y="121" width="86.333333333333329" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bow-Bx-09Z">
+                                <rect key="frame" x="20" y="140" width="28.333333333333329" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Lives" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeB-qZ-9JE">
-                                <rect key="frame" x="343" y="121" width="40" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2v-pi-v1C">
+                                <rect key="frame" x="328" y="140" width="45" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="LIVES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeB-qZ-9JE">
+                                <rect key="frame" x="326.33333333333331" y="121" width="46.666666666666686" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -120,21 +135,34 @@
                         <viewLayoutGuide key="safeArea" id="t7I-NE-6oH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KeB-qZ-9JE" firstAttribute="leading" secondItem="ZIF-gm-LJV" secondAttribute="trailing" constant="274" id="3hT-hb-IJw"/>
+                            <constraint firstItem="KeB-qZ-9JE" firstAttribute="leading" secondItem="ZIF-gm-LJV" secondAttribute="trailing" constant="220" id="3hT-hb-IJw"/>
                             <constraint firstItem="KeB-qZ-9JE" firstAttribute="top" secondItem="tGu-9n-xsL" secondAttribute="bottom" constant="18" id="9hh-qE-ne2"/>
-                            <constraint firstItem="t7I-NE-6oH" firstAttribute="trailing" secondItem="KeB-qZ-9JE" secondAttribute="trailing" constant="10" id="Bcn-cO-QDv"/>
-                            <constraint firstItem="ZIF-gm-LJV" firstAttribute="leading" secondItem="t7I-NE-6oH" secondAttribute="leading" constant="10" id="HCR-yp-sOW"/>
+                            <constraint firstItem="bow-Bx-09Z" firstAttribute="top" secondItem="ZIF-gm-LJV" secondAttribute="bottom" constant="-2" id="Awj-bp-K3d"/>
+                            <constraint firstItem="t7I-NE-6oH" firstAttribute="trailing" secondItem="KeB-qZ-9JE" secondAttribute="trailing" constant="20" id="Bcn-cO-QDv"/>
+                            <constraint firstItem="ZIF-gm-LJV" firstAttribute="leading" secondItem="t7I-NE-6oH" secondAttribute="leading" constant="20" id="HCR-yp-sOW"/>
                             <constraint firstItem="F3w-wm-Ehb" firstAttribute="top" secondItem="t7I-NE-6oH" secondAttribute="top" constant="184" id="NyW-K3-xAF"/>
+                            <constraint firstItem="bow-Bx-09Z" firstAttribute="leading" secondItem="t7I-NE-6oH" secondAttribute="leading" constant="20" id="OU0-tz-hPF"/>
                             <constraint firstItem="axO-t2-UkX" firstAttribute="leading" secondItem="t7I-NE-6oH" secondAttribute="leading" constant="50" id="QUj-xi-QWb"/>
                             <constraint firstItem="F3w-wm-Ehb" firstAttribute="leading" secondItem="t7I-NE-6oH" secondAttribute="leading" constant="40" id="SAR-rs-312"/>
+                            <constraint firstItem="U2v-pi-v1C" firstAttribute="leading" secondItem="bow-Bx-09Z" secondAttribute="trailing" constant="279.66666666666669" id="ca2-50-ZlK"/>
                             <constraint firstItem="ZIF-gm-LJV" firstAttribute="top" secondItem="tGu-9n-xsL" secondAttribute="bottom" constant="18" id="fnD-Rz-HF2"/>
                             <constraint firstItem="tGu-9n-xsL" firstAttribute="trailing" secondItem="t7I-NE-6oH" secondAttribute="trailing" id="gcI-IH-ggX"/>
                             <constraint firstItem="t7I-NE-6oH" firstAttribute="trailing" secondItem="F3w-wm-Ehb" secondAttribute="trailing" constant="40" id="kz0-Hh-OxT"/>
                             <constraint firstItem="tGu-9n-xsL" firstAttribute="top" secondItem="t7I-NE-6oH" secondAttribute="top" id="q2s-8g-AWA"/>
+                            <constraint firstItem="U2v-pi-v1C" firstAttribute="top" secondItem="KeB-qZ-9JE" secondAttribute="bottom" constant="-2" id="rky-4l-MJw"/>
                             <constraint firstItem="axO-t2-UkX" firstAttribute="top" secondItem="F3w-wm-Ehb" secondAttribute="bottom" constant="133" id="tTX-X3-TLg"/>
                             <constraint firstItem="t7I-NE-6oH" firstAttribute="trailing" secondItem="axO-t2-UkX" secondAttribute="trailing" constant="50" id="wiY-Jk-Qhp"/>
+                            <constraint firstItem="t7I-NE-6oH" firstAttribute="trailing" secondItem="U2v-pi-v1C" secondAttribute="trailing" constant="20" id="xkn-dj-aTO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currWord" destination="F3w-wm-Ehb" id="PQ5-u9-pjo"/>
+                        <outlet property="livesLabel" destination="KeB-qZ-9JE" id="3FZ-1s-bYj"/>
+                        <outlet property="scoreLabel" destination="ZIF-gm-LJV" id="gZA-uc-URd"/>
+                        <outlet property="userGuess" destination="axO-t2-UkX" id="Dar-CY-8lf"/>
+                        <outlet property="userLives" destination="U2v-pi-v1C" id="eKz-FP-pZy"/>
+                        <outlet property="userScore" destination="bow-Bx-09Z" id="ZlQ-YU-NP9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piH-eG-MsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
